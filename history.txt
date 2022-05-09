@@ -1,0 +1,5 @@
+1. docker image build . -t custom-caddy:14.2-alpine3.15
+2. docker volume create my-vol
+3. docker container run -v my-vol:/usr/src/pages/ --name mycaddy -p 1024:1024 -d custom-caddy:14.2-alpine3.15
+
+obs: abrir na port 1024; arquivos devem estar em seus locais corretos (caddyfile no /etc/caddy/ e index.html em /usr/src/pages)
